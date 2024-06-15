@@ -1,22 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicios JS</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios JS 17</title>
+  </head>
+
+  <body>
     <h3>Ejercicio 1</h3>
-    <p>Escribe un programa de una sola línea que haga que aparezca en la pantalla un alert que diga "Hola Mundo"</p>
-    <script>alert("Hola Mundo")</script>
-    <hr>
+    <p>
+      Escribe un programa de una sola línea que haga que aparezca en la pantalla
+      un alert que diga "Hola Mundo"
+    </p>
+    <script>
+      alert("Hola Mundo");
+    </script>
+    <hr />
+
     <h3>Ejercicio 2</h3>
-    <p>Escribe un programa de una sola línea que aparezca en la pantalla un texto que diga "Hello World" (document.write).</p>
-    <script>document.write ("Hola Mundo")</script>
-    <hr>
+    <p>
+      Escribe un programa de una sola línea que aparezca en la pantalla un texto
+      que diga "Hello World" (document.write).
+    </p>
+    <script>
+      document.write("Hello World");
+    </script>
+    <hr />
+
     <h3>Ejercicio 3</h3>
-    <p>Escribe un programa de una sola línea que aparezca en la pantalla el resultado de sumar 3 +5.</p>
-    <script>document.write (3+5)</script>
+    <p>
+      Escribe un programa de una sola línea que aparezca en la pantalla el
+      resultado de sumar 3+5.
+    </p>
+    <script>
+      document.write(3 + 5);
+    </script>
+    <hr />
+
+    <h3>Ejercicio 4</h3>
+    <p>
+      Escribe un programa de dos líneas que pida el nombre del usuario con un
+      prompt y escriba un texto que diga “Hola nombreUsuario”
+    </p>
+    <script>
+      var nombre = prompt("Escribe tu nombre");
+      document.write("Hola" + nombre);
+    </script>
+    <hr />
+
+    <h3>Ejercicio 5</h3>
+    <p>
+      Escribe un programa de tres líneas que pida un número, pida otro número y
+      escriba el resultado de sumar estos dos números.
+    </p>
+    <script>
+      var n1 = prompt("Escribe un número");
+      var n2 = prompt("Escribe otro número");
+      document.write("La suma es: " + (parseInt(n1) + parseInt(n2)));
+    </script>
+    <hr />
+
+    <h3>Ejercicio 6</h3>
+    <p>
+      Escribe un programa que pida dos números y muestre en la pantalla cual es
+      el mayor.
+    </p>
+    <script>
+      var n1 = prompt("Escribe un número");
+      var n2 = prompt("Escribe otro número");
+      if (n1 > n2) {
+        document.write(n1);
+      } else {
+        document.write(n2);
+      }
+    </script>
+    <hr />
+
+    <h3>Ejercicio 7</h3>
+    <p>
+      Escribe un programa que pida 3 números y escriba en la pantalla el mayor
+      de los tres.
+    </p>
+    <script>
+      var n1 = prompt("Escribe un número");
+      var n2 = prompt("Escribe el segundo número");
+      var n3 = prompt("Escribe el tercer número");
+      if (+n1 > +n2 && +n1 > +n3) {
+        document.write(+n1);
+      } else if (+n2 > +n3) {
+        document.write(+n2);
+      } else {
+        document.write(+n3);
+      }
+    </script>
+    <hr />
+
+    <h3>Ejercicio 8</h3>
+    <p>Escribe un programa que pida un número y diga si es divisible por 2</p>
+    <script>
+      numero = parseInt(prompt("Escribe un número"));
+      if (numero % 2 === 0) {
+        document.write("El número es divisible por 2");
+      } else {
+        document.write("El número no es divisible por 2");
+      }
+    </script>
+    <hr />
+
+    <h3>Ejercicio 9</h3>
+    <p>
+      Escribe un programa que pida una frase y escriba cuantas veces aparece la
+      letra a
+    </p>
+    <script>
+      frase = prompt("Escribe una frase:");
+      contador = 0;
+      i = 0;
+      console.log("Estoy justo antes de entrar al while");
+      while (i <= frase.length) {
+        console.log("He entrado dentro del bucle while. El index vale:" + i);
+        if (
+          frase.substr(i, 1) == "a" ||
+          frase.substr(i, 1) == "á" ||
+          frase.substr(i, 1) == "A" ||
+          frase.substr(i, 1) == "Á"
+        ) {
+          contador++;
+        }
+        i++;
+      }
+      alert("La frase contiene" + contador + "a");
+      document.write("La frase contiene" + contador + "a");
+    </script>
+    <hr />
+
+    <h3>Ejercicio 10</h3>
+    <p>
+      Escribe un programa que pida una frase y escriba las vocales que aparecen
+    </p>
+    <script>
+      frase = prompt("Escribe una frase");
+      vocales = "";
+      i=0;
+      while (i<=frase.length){
+          if (frase.substr(i,1) === "a" || frase.substr(i,1) === "e" || frase.substr(i,1) === "i" || frase.substr(i,1) === "o" || frase.substr(i,1) === "u") {
+      vocales += frase.substr (i,1);
+          }
+          i++
+    </script>
+    <hr />
+
+    <h3>Ejercicio 11</h3>
+    <p>
+      Escribe un programa que pida una frase y escriba cuántas de las letras que
+      tiene son vocales
+    </p>
+    <script>
+      frase = prompt("Escribe una frase");
+      vocales = "";
+      numVocales = 0;
+      i = 0;
+      while (i <= frase.length) {
+        if (
+          frase.substr(i, 1) === "a" ||
+          frase.substr(i, 1) === "e" ||
+          frase.substr(i, 1) === "i" ||
+          frase.substr(i, 1) === "o" ||
+          frase.substr(i, 1) === "u"
+        ) {
+          vocales += frase.substr(i, 1);
+          numVocales++;
+        }
+        i++;
+      }
+      document.write(
+        "En la frase salen las siguientes vocales: " +
+          vocales +
+          " numero de vocales: " +
+          numVocales
+      );
+    </script>
+    <hr />
+
+    <h3>Ejercicio 12</h3>
+    <p>
+      Escribe un programa que pida una frase y escriba cuántas veces aparecen
+      cada una de las vocales
+    </p>
+    <hr />
+    <script>
+      frase = prompt ("Introduce la frase a analizar");
+      contadorA=0; contadorE=0; contadorI=0; contadorO=0; contadorU=0;
+      i=0;
+      hora=new Date (Date.now());
+      document.write ("Hora de inicio del proceso: " + hora);
+      while (i<=frase.length) {
+          if (frase.substr (i,1) === "a") { contador A++;}
+          if (frase.substr (i,1) === "e") { contador E++;}
+          if (frase.substr (i,1) === "i") { contador I++;}
+          if (frase.substr (i,1) === "o") { contador O++;}
+          if (frase.substr (i,1) === "u") { contador U++;}
+      }
+
+      frase = prompt("Introdueix la frase a analitzar");
+              comptador=[0,0,0,0,0]; vocals=["a","e","i","o","u"]; // llista de comptadors per a cada lletra
+              i=0;
+              console.time();
+              while(i<=frase.length){
+                  if(frase.substr(i,1)==="a"){ comptador[0]++;}
+                  if(frase.substr(i,1)==="e"){ comptador[1]++;}
+                  if(frase.substr(i,1)==="i"){ comptador[2]++;}
+                  if(frase.substr(i,1)==="o"){ comptador[3]++;}
+                  if(frase.substr(i,1)==="u"){ comptador[4]++;}
+                  i++;
+              }
+              i=0;
+              while(i<vocals.length){
+                  document.write("Número de " + vocals[i] + ": " + comptador[i] + "<br>");
+                  i++;
+              }
+              console.timeEnd();
+    </script>
+    <hr />
+
+    <h3>Ejercicio 13</h3>
+    <p>
+      Escribe un programa que pida un número y nos diga si es divisible por 2,
+      3, 5 o 7 (sólo hay que comprobar si lo es por uno de los cuatro)
+    </p>
+    <script>
+      var n1 = prompt("Escribe un número");
+      if (n1 % 2 === 0 || n1 % 3 === 0 || n1 % 5 === 0 || n1 % 7 === 0) {
+        document.write("Es divisible por 2, 3, 5 o 7");
+      } else {
+        document.write(
+          "No es divisible ni por 2, ni por 3, ni por 5, ni por 7"
+        );
+      }
+    </script>
+    <hr />
+
+    <h3>Ejercicio 14</h3>
+    <p>
+      Añadir al ejercicio anterior que nos diga por cual de los cuatro es
+      divisible (hay que decir todos por los que es divisible)
+    </p>
+    <script>
+      var n1 = prompt("Escribe un número");
+      if (n1 % 2 === 0 || n1 % 3 === 0 || n1 % 5 === 0 || n1 % 7 === 0) {
+        if (n1 % 2 === 0) {
+          document.write("Es divisible por 2. ");
+        }
+        if (n1 % 3 === 0) {
+          document.write("Es divisible por 3. ");
+        }
+        if (n1 % 5 === 0) {
+          document.write("Es divisible por 5. ");
+        }
+        if (n1 % 7 === 0) {
+          document.write("Es divisible por 7. ");
+        }
+      } else {
+        document.write(
+          "No es divisible ni por 2, ni por 3, ni por 5, ni por 7"
+        );
+      }
+    </script>
+    <hr />
+
+    <h3>Ejercicio 15</h3>
+    <p>
+      Escribir un programa que escriba en pantalla los divisores de un número
+      dado
+    </p>
+    <script>
+      numero = parseInt(prompt("Introduce tu numero"));
+      i = 1;
+      divisor = "";
+      while (i < numero) {
+        if (numero % i == 0) {
+          divisor = divisor + i.tostring() + ",";
+        }
+        i++;
+      }
+      document.write("El numero es divisible entre:" + divisor + numero + ".");
+    </script>
     <hr>
-</body>
+    <h3>Ejercicio 16</h3>
+    <p>
+      Escribir un programa que escriba en pantalla los divisores comunes de dos
+      números dados
+    </p>
+    <script>
+      numero1 = parseInt(prompt("Introduce el primer número"));
+      numero2 = parseInt(prompt("Introduce el segon número"));
+      i = 0;
+      divisor = "";
+      if (numero1 > numero2) {
+        while (i <= numero2) {
+          if (numero1 % i == 0 && numero2 % i == 0) {
+            divisor = divisor + i.toString() + ", ";
+          }
+          i++;
+        }
+      } else {
+        while (i <= numero1) {
+          if (numero2 % i == 0 && numero1 % i == 0) {
+            divisor = divisor + i.toString() + ",";
+          }
+          i++;
+        }
+      }
+      document.write("Los dos números son divisibles entre: " + divisor);
+    </script>
+    <hr/>
+    <h3>Ejercicio 17</h3>
+    <p>
+      Escribir un programa que nos diga si un número dado es primo (no es
+      divisible por ninguno otro número que no sea él mismo o la unidad)
+    </p>
+    <script>
+      numero = parseInt(prompt("Introduce el número para analizarlo"));
+      document.write("<br>------MINA------EXCEL·LENT");
+      i = 2;
+      primer = true;
+      while (i < numero) {
+        if (numero % i == 0) {
+          primer = false;
+        }
+        i++;
+      }
+      if (primer == true) {
+        document.write("El número és primer");
+      } else {
+        document.write("No és primer");
+      }
+      document.write("<br>------VERONICA--------EXCEL·LENT--");
+      n1 = numero;
+      i = 2;
+      while (n1 % i !== 0 && i < n1 / 2) {
+        i++;
+      }
+      if (n1 % i !== 0) {
+        document.write("El número es primo");
+      } else {
+        document.write("El número NO es primo");
+      }
+    </script>
+  </body>
 </html>
